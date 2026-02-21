@@ -1,0 +1,100 @@
+{
+  // Bar position and layer
+  "layer": "top",
+  "position": "top",
+  "margin-top": 5,
+  "margin-left": 10,
+  "margin-right": 10,
+  "spacing": 0,
+
+  // Module layout (three pill groups)
+  "modules-left": ["hyprland/workspaces", "custom/power_profile"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "bluetooth",
+    "network",
+    "pulseaudio",
+    "cpu",
+    "memory",
+    "battery",
+    "custom/shutdown",
+  ],
+
+  // LEFT: Workspaces
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "all-outputs": true,
+  },
+
+  // CENTER: Clock
+  "clock": {
+    "format": "  {:%H:%M  |    %d.%m.}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "on-click": "gsimplecal",
+  },
+
+  // RIGHT: System info
+  "bluetooth": {
+    "format": "󰂯 ",
+    "format-connected": "󰂯 ",
+    "format-disabled": "󰂲 ",
+    "format-off": "󰂲 ",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager",
+  },
+
+  "network": {
+    "format-wifi": "{icon} {essid}",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format-disconnected": "󰖪 ",
+    "tooltip-format": "{ifname} on {gwaddr}",
+    "on-click": "nm-connection-editor",
+  },
+
+  "custom/power_profile": {
+    "exec": "~/.config/waybar/power_profile.sh",
+    "interval": 2,
+    "format": "{}",
+    "on-click": "~/.config/waybar/power_cycle.sh",
+    "tooltip": false,
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 Muted",
+    "format-icons": {
+      "headphone": "",
+      "default": ["󰕿", "󰖀", "󰕾"],
+    },
+    "on-click": "pavucontrol",
+  },
+
+  "cpu": {
+    "format": " {usage}% ",
+    "on-click": "kitty btop",
+  },
+
+  "memory": {
+    "format": " {percentage}%",
+    "on-click": "kitty btop",
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{icon} {capacity}% ",
+    "format-charging": "󱐋 {capacity}% ",
+    "format-plugged": " {capacity}% ",
+    "format-icons": ["", "", "", "", ""],
+  },
+
+  "custom/shutdown": {
+    "format": " ",
+    "on-click": "wlogout -b 5 -c 0 -r 0 -m 0",
+  },
+}

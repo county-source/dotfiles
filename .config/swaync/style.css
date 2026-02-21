@@ -1,0 +1,21 @@
+@define-color primary #c2c6d6;
+@define-color bg #131315;
+@define-color text #e4e2e3;
+
+.notification {
+    background: @bg;
+    border: 2px solid @primary;
+    border-radius: 15px;
+    color: @text;
+    margin: 10px;
+}
+
+.notification-content {
+    padding: 10px;
+}
+
+.close-button {
+    background: @primary;
+    color: @bg;
+    border-radius: 10px;
+}

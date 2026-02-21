@@ -1,0 +1,42 @@
+window {
+    background-color: transparent;
+}
+
+grid {
+    background-color: #161313;
+    border: 2px solid #ddbfc4;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 430px;
+    margin-bottom: 470px;
+    margin-left: 550px;
+    margin-right: 780px;
+}
+
+button {
+    all: unset;
+    background-color: transparent;
+    border: 2px solid #ddbfc4;
+    border-radius: 15px;
+    min-width: 110px;
+    min-height: 110px;
+    color: #ffffff;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 55px;
+    margin: 10px;
+    padding-bottom: 40px;
+}
+
+button label {
+    margin: 0px;
+    padding: 0px;
+}
+
+button:hover {
+    background-color: #ddbfc4;
+    color: #161313;
+}
+
+#lock, #logout, #suspend, #reboot, #shutdown {
+    background-image: none;
+}

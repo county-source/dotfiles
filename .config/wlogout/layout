@@ -1,0 +1,25 @@
+{
+    "label": "lock",
+    "action": "loginctl lock-session",
+    "text": "󰌾"
+}
+{
+    "label": "logout",
+    "action": "pkill swww && pkill waybar && hyprctl dispatch exit",
+    "text": "󰍃"
+}
+{
+    "label": "suspend",
+    "action": "systemctl suspend",
+    "text": "󰤄"
+}
+{
+    "label": "reboot",
+    "action": "systemctl reboot",
+    "text": "󰑐"
+}
+{
+    "label": "shutdown",
+    "action": "systemctl poweroff",
+    "text": "󰐥"
+}

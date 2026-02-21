@@ -1,0 +1,10 @@
+* {
+    /* bg: pozadí okna */
+    bg: rgba(0, 0, 0, 0.9);
+    /* primary: barva rámečku a výběru (teď bude modrá/barevná) */
+    primary: #ddbfc4;
+    /* surface: barva pozadí pod vybraným textem */
+    surface: #161313;
+    /* text: barva písma v seznamu */
+    text: #ffffff;
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "positionX": "right",
+  "positionY": "top",
+  "timeout": 3,
+  "close-on-click": true,
+  "notification-window-width": 320,
+  "widget-config": {
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": false
+    }
+  }
+}

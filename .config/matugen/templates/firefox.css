@@ -1,0 +1,27 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+:root {
+    --matugen-bg: rgb({{colors.surface.default.rgb_raw}});
+    --matugen-fg: rgb({{colors.on_surface.default.rgb_raw}});
+    --matugen-primary: rgb({{colors.primary.default.rgb_raw}});
+    --matugen-accent: rgb({{colors.primary_container.default.rgb_raw}});
+}
+
+/* Základní obarvení lišty a tabů */
+#navigator-toolbox {
+    background-color: var(--matugen-bg) !important;
+    border: none !important;
+}
+
+.tab-background[selected="true"] {
+    background-color: var(--matugen-primary) !important;
+}
+
+.tab-content {
+    color: var(--matugen-fg) !important;
+}
+
+#urlbar-background {
+    background-color: rgb({{colors.surface_container.default.rgb_raw}}) !important;
+    border: 1px solid var(--matugen-primary) !important;
+}

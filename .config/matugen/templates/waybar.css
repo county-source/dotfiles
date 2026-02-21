@@ -1,0 +1,4 @@
+@define-color primary {{colors.primary.default.hex}};
+@define-color main-bg {{colors.background.default.hex}};
+@define-color surface {{colors.surface.default.hex}};
+@define-color error {{colors.error.default.hex}};

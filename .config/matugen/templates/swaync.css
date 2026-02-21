@@ -1,0 +1,53 @@
+@define-color primary {{colors.primary.default.hex}};
+@define-color surface rgba({{colors.surface.default.rgb.r}}, {{colors.surface.default.rgb.g}}, {{colors.surface.default.rgb.b}}, 0.75);
+@define-color on_surface {{colors.on_surface.default.hex}};
+
+.notification {
+    background: @surface !important;
+    border: 1px solid @primary !important;
+    border-radius: 10px !important;
+    color: @on_surface !important;
+    margin: 4px !important;
+    min-width: 200px !important;
+    max-width: 250px !important;
+    min-height: 20px !important;
+    padding: 0px !important;
+}
+
+/* Hide all close buttons */
+.close-button,
+.notification-close-button,
+.header-close-button,
+button.close {
+    display: none !important;
+    background: transparent !important;
+    color: transparent !important;
+    padding: 0 !important;
+    margin: -10px !important;
+}
+
+.notification-content {
+    background: transparent !important;
+    padding: 4px 8px !important;
+}
+
+.summary {
+    color: @on_surface !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+}
+
+.body {
+    color: @on_surface !important;
+    font-size: 10px !important;
+    line-height: 1 !important;
+}
+
+/* Small icon for low profile */
+.image, .notification-image, .notification-icon {
+    margin: 2px 6px 2px 0px !important;
+    min-width: 20px !important;
+    max-width: 20px !important;
+    min-height: 20px !important;
+    max-height: 20px !important;
+}
